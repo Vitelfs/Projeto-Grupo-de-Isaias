@@ -1,0 +1,209 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1e293b, #3b82f6);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* Container Principal */
+.login-container {
+    background: rgba(219, 219, 219, 0.233);
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    backdrop-filter: blur(15px);
+    width: 100%;
+    max-width: 400px;
+    transition: all;
+}
+
+/* Título */
+.login-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #F1FAEE;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Formulário */
+.box-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Inputs */
+.login-input {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 5px;
+    padding: 14px 18px;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.login-input:focus {
+    outline: 2px solid #A8DADC;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+/* Botão de Login */
+.login-button {
+    background: linear-gradient(90deg, #3b82f6, #1e568a);
+    color: #fff;
+    border: #fff solid 3px;
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.6s ease;
+}
+
+.login-button:hover {
+    background: linear-gradient(90deg, #1e568a, #1e568a);
+    transform: scale(1.05);
+    transition: all 0.6s ease;
+}
+
+/* Link Esqueceu Senha */
+.forgot_password {
+    font-size: 14px;
+    color: #e6f6ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot_password:hover {
+    color: #ffffff;
+}
+
+/* Separador */
+.separator {
+    margin: 20px 0;
+    font-size: 14px;
+    color: #F1FAEE;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30%;
+    height: 1px;
+    background-color: #F1FAEE;
+}
+
+.separator::before {
+    left: 0;
+}
+
+.separator::after {
+    right: 0;
+}
+
+/* Botões de Login Social */
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-button {
+    background: rgba(255, 255, 255, 0.1);
+    color: #F1FAEE;
+    border: 3px solid #F1FAEE;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social-button:hover {
+    transform: scale(1.05);
+}
+
+/* Ícones Sociais */
+.social-button.google {
+    color: #f1f1f1;
+}
+
+.social-button.google:hover {
+    background-color: #ee1400;
+    color: #ffffff;
+}
+
+.social-button.facebook {
+    color: #f1f1f1;
+}
+
+.social-button.facebook:hover {
+    background-color: #4267B2;
+    color: #ffffff;
+}
+
+.social-button.twitter {
+    color: #f1f1f1;
+}
+
+.social-button.twitter:hover {
+    background-color: #1DA1F2;
+    color: #ffffff;
+}
+
+.social-button.linkedin {
+    color: #f1f1f1;
+}
+
+.social-button.linkedin:hover {
+    background-color: #0077B5;
+    color: #ffffff;
+}
+
+/* Registro */
+.register-container {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.register-text {
+    display: inline;
+    color: #F1FAEE;
+    font-weight: bold;
+}
+
+.register-link {
+    color: #c7c7c7;
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold;
+}
+
+.register-link:hover {
+    color: #ffffff; /* Muda cor ao passar o mouse */
+}

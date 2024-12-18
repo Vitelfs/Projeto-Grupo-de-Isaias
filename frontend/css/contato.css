@@ -1,0 +1,182 @@
+/* Reset de margens e preenchimento */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e293b, #3b82f6);
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(90deg, #3b82f6, #1e3a8a);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#voltar {
+    background: #ff0a0a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#voltar:hover {
+    background: #c90000;
+    transform: scale(1.05);
+}
+
+/* Estilo do contêiner principal */
+.faq-container {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #ffffff, #f3f3f8);
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.emergency-call {
+    background: #d9534f;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background 0.3s ease;
+}
+
+.emergency-call:hover {
+    background: #c9302c;
+}
+
+/* Lista de contatos */
+.family-contacts {
+    margin-top: 20px;
+}
+
+.family-contacts h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#contact-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f1f1f1;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact-list li button {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#contact-list li button:hover {
+    background: #2563eb;
+}
+
+.add-contact {
+    background: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.add-contact:hover {
+    background: #449d44;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-content button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+li{
+    color: #333;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações de Monitoramento</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+
+
+    <link rel="stylesheet" href="../css/sidebar.css">
+
+</head>
+<body>
+    <div class="sidebar-container">
+        <aside class="sidebar">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="visualizacao.html">Visualização de Câmeras</a></li>
+                <li><a href="contato.html">Contatos de Emergência</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><button id="logout">Sair</button></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <header>
+                <h1>Configurações de Monitoramento</h1>
+            </header>
+            <section class="config">
+                <h2>Parâmetros dos Sensores</h2>
+                <label for="sensibilidade">Sensibilidade:</label>
+                <input type="range" id="sensibilidade" min="1" max="10" value="5">
+
+                <label for="frequencia">Frequência das Notificações:</label>
+                <input type="number" id="frequencia" value="15"> minutos
+
+                <label for="silencio">Tempos de Silêncio:</label>
+                <input type="time" id="inicio-silencio">
+                <input type="time" id="fim-silencio">
+
+                <button id="save">Salvar Configurações</button>
+            </section>
+        </main>
+    </div>
+    <script>
+        document.getElementById('logout').addEventListener('click', () => {
+        alert("Logout realizado com sucesso!");
+        // Redirecionar para a tela de login
+        window.location.href = 'login.html';
+    });
+    </script>
+</body>
+</html>

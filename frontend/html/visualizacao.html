@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualização de Câmeras e Sensores</title>
+    <link rel="stylesheet" href="../css/visualizacao.css">
+</head>
+
+
+<body>
+    <div class="visualizacao-container">
+        <header>
+            <h1>Visualização de Câmeras</h1>
+           <button id="voltar">Voltar</button>
+        </header>
+        
+        <section class="cameras">
+            <h2>Câmeras</h2>
+            <div class="camera-feed" id="camera-feed">
+                <img id="stream" src="http://127.0.0.1:5000/video_feed"alt="Feed de câmera">
+            </div>
+            <div class="area-selector">
+                <button onclick="selectArea('sala')">Sala de Estar</button>
+                <button onclick="selectArea('cozinha')">Cozinha</button>
+                <button onclick="selectArea('quarto')">Quarto</button>
+                <button onclick="selectArea('garagem')">Garagem</button>
+            </div>
+        </section>
+
+        <div class="dashboard-container">
+            
+            <section class="status-section">
+                <h2>Status das Áreas</h2>
+                <div class="area-status">
+                    <div class="area" id="area-living-room">
+                        <h3>Sala de Estar</h3>
+                        <p class="status">Tudo normal</p>
+                    </div>
+                    <div class="area" id="area-kitchen">
+                        <h3>Cozinha</h3>
+                        <p class="status alert">Alerta em Cozinha</p>
+                    </div>
+                    <div class="area" id="area-bedroom">
+                        <h3>Quarto</h3>
+                        <p class="status">Tudo normal</p>
+                    </div>
+                    <div class="area" id="area-garage">
+                        <h3>Garagem</h3>
+                        <p class="status">Tudo normal</p>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="log-section">
+                <h2>Log de Atividades</h2>
+                <ul id="activity-log">
+                    <li>12:30 - Movimento detectado na Sala de Estar.</li>
+                    <li>12:15 - Sensor de fumaça ativado na Cozinha.</li>
+                    <li>12:00 - Câmera da Garagem ativada.</li>
+                </ul>
+            </section>
+        </div>
+
+    <script>
+         document.getElementById('voltar').addEventListener('click', function () {
+    window.location.href = "../html/sidebar.html";
+  });
+    
+    // Função para atualizar o log de atividades
+    function updateActivityLog(message) {
+        const log = document.getElementById('activity-log');
+        const newLogEntry = document.createElement('li');
+        newLogEntry.textContent = message;
+        log.prepend(newLogEntry);
+    }
+    
+    // Exemplo de atualização do log
+    setTimeout(() => {
+        updateActivityLog("13:00 - Movimento detectado na Cozinha.");
+    }, 5000);
+
+        document.getElementById('logout').addEventListener('click', () => {
+    alert("Logout realizado com sucesso!");
+    window.location.href = 'index.html';
+});
+
+function selectArea(area) {
+    const video = document.querySelector('video');
+    video.src = `path_to_your_stream/${area}.mp4`; // Substitua pelo caminho do seu feed
+    // Atualize os dados do sensor
+    updateSensorData(area);
+}
+
+function updateSensorData(area) {
+    // Aqui você pode buscar dados do sensor via API ou outro método
+    const movementLevel = Math.floor(Math.random() * 100); // Exemplo aleatório
+    document.getElementById('movement-level').innerText = movementLevel;
+    drawChart(movementLevel);
+}
+
+function drawChart(movementLevel) {
+    const canvas = document.getElementById('movement-chart');
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = 'blue';
+    ctx.fillRect(0, canvas.height - movementLevel, 50, movementLevel); // Exemplo simples
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="../css/faq.css">
+</head>
+
+<body>
+    <div class="faq-container">
+        <header>
+            <h1>Perguntas Frequentes</h1>
+            <button id="voltar">Voltar</button>
+        </header>
+
+        <section class="faq">
+            <div class="faq-item">
+                <h3 class="faq-question">Como configurar os sensores?</h3>
+                <p class="faq-answer">Para configurar os sensores, acesse a tela de configurações e ajuste os parâmetros desejados.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Como visualizar as câmeras?</h3>
+                <p class="faq-answer">Vá até a tela de visualização e selecione a área desejada para acessar o feed da câmera.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">O que fazer em caso de um alerta?</h3>
+                <p class="faq-answer">Verifique a tela de alertas para detalhes do evento e tome as ações necessárias, como confirmar ou dispensar o alerta.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Como adicionar contatos de emergência?</h3>
+                <p class="faq-answer">Acesse a tela de contatos de emergência e adicione as informações necessárias, como nome e telefone.</p>
+            </div>
+        </section>
+    </div>
+
+    <script>   document.getElementById('voltar').addEventListener('click', function () {
+        window.location.href = "../html/sidebar.html";
+      });
+        </script>
+</body>
+</html>

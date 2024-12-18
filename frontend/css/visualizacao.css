@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    margin: 0;
+}
+
+.visualizacao-container {
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #3b82f6, #1e3a8a);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.cameras {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.camera-feed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60vh; /* 60% da altura da tela */
+    background: #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.camera-feed video {
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.area-selector {
+    margin-top: 10px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px;
+    background: #ff0a0a;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#sensor-data {
+    margin-top: 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.dashboard-container {
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+button {
+    background: #ff0a0a;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.status-section, .log-section {
+    margin: 20px 0;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.area-status {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.area {
+    width: 45%;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    background: #e0e0e0;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.area:hover {
+    background: #d1d1d1;
+}
+
+.status {
+    font-weight: bold;
+}
+
+.status.alert {
+    color: #ff0a0a;
+}
+img{
+    width: 500px;
+}
